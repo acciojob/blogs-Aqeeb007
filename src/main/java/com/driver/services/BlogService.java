@@ -38,7 +38,7 @@ public class BlogService {
         blog.setUser(user);
         List<Blog> blogs = blogRepository1.findAll();
         blogs.add(blog);
-        user.setListOfBlogs(blogs);
+        user.setBlogList(blogs);
         userRepository1.save(user);
 
         //Updating the userInformation and changing its blogs
@@ -57,7 +57,7 @@ public class BlogService {
         image.setBlog(blog);
         List<Image> images = imageService1.imageRepository2.findAll();
         images.add(image);
-        blog.setListOfImage(images);
+        blog.setImageList(images);
         blogRepository1.save(blog);
         }
 

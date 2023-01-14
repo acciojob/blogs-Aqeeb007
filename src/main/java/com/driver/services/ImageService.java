@@ -30,9 +30,9 @@ public class ImageService {
     public int countImagesInScreen(Image image, String screenDimensions) {
         //Find the number of images of given dimensions that can fit in a screen having `screenDimensions`
         //In case the image is null, return 0
-        int is = image.getDimension().charAt(0);
+        int is = image.getDimensions().charAt(0);
         int scs = screenDimensions.charAt(0);
-        int ie = image.getDimension().charAt(2);
+        int ie = image.getDimensions().charAt(2);
         int sce = screenDimensions.charAt(2);
 
         return 0;
