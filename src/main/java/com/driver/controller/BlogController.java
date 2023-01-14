@@ -18,13 +18,13 @@ BlogController {
     BlogService blogService;
 
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<Integer> getAllBlogs() {
         int countOfBlogs = 0;
         return new ResponseEntity<>(countOfBlogs, HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity createBlog(@RequestParam Integer userId ,
                                            @RequestParam String title,
                                            @RequestParam String content) {

@@ -26,7 +26,7 @@ public class BlogService {
 
     public List<Blog> showBlogs(){
         //find all blogs
-        return blogRepository1.findAll();
+        return null;
     }
 
     public void createAndReturnBlog(Integer userId, String title, String content) {
@@ -54,6 +54,7 @@ public class BlogService {
         //add an image to the blog after creating it
         Image image = new Image(description,dimensions);
         Blog blog = blogRepository1.findById(blogId).get();
+        image.setBlog(blog);
         List<Image> images = imageService1.imageRepository2.findAll();
         images.add(image);
         blog.setListOfImage(images);
