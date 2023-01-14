@@ -14,7 +14,7 @@ public class User {
     private String lastName;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Blog> listOfBlogs;
+    private List<Blog> blogList;
 
 
 
@@ -28,12 +28,12 @@ public class User {
         this.lastName = lastName;
     }
 
-    public List<Blog> getListOfBlogs() {
-        return listOfBlogs;
+    public List<Blog> getBlogList() {
+        return blogList;
     }
 
-    public void setListOfBlogs(List<Blog> listOfBlogs) {
-        this.listOfBlogs = listOfBlogs;
+    public void setBlogList(List<Blog> blogList) {
+        this.blogList = blogList;
     }
 
     public int getId() {
