@@ -21,8 +21,7 @@ public class UserService {
     }
 
     public void deleteUser(int userId){
-        User user = userRepository3.findById(userId).get();
-        userRepository3.delete(user);
+        userRepository3.deleteById(userId);
     }
 
     public void updateUser(User user){
@@ -30,8 +29,7 @@ public class UserService {
     }
 
     public User findUserByUsername(String username){
-
-        User user = findUserByUsername(username);
-        return user;
+        return userRepository3.findByUsername(username);
     }
+
 }
